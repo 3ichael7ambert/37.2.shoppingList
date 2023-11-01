@@ -5,7 +5,7 @@ const router = express.Router();
 
 /** GET / => [item, ...] */
 
-router.get('', (req, res, next) => {
+router.get('/', (req, res, next) => {
   try {
     return res.json({ items: Item.findAll() });
   } catch(err){
@@ -15,7 +15,7 @@ router.get('', (req, res, next) => {
 
 /** POST / {name, price} => new-item */
 
-router.post('', (req, res, next) => {
+router.post('/', (req, res, next) => {
   try {
     let newItem = new Item(req.body.name, req.body.price);
     return res.json({item: newItem});
