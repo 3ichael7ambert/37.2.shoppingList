@@ -5,6 +5,8 @@ const ExpressError = require("./expressError")
 
 app.use(express.json());
 app.use("/items", itemsRoutes);
+app.use("/", itemsRoutes);
+
 
 /** 404 handler */
 

@@ -16,13 +16,15 @@ router.get('/', (req, res, next) => {
 /** POST / {name, price} => new-item */
 
 router.post('/', (req, res, next) => {
+  console.log(req.body); // Log the received data
   try {
     let newItem = new Item(req.body.name, req.body.price);
-    return res.json({item: newItem});
+    return res.json({ item: newItem });
   } catch (err) {
-    return next(err)
+    return next(err);
   }
 });
+
 
 /** GET /[name] => item */
 

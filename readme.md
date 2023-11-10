@@ -37,3 +37,21 @@ curl -X PATCH "http://localhost:3000/items/example_item/new_name/14.99"
 curl -X DELETE "http://localhost:3000/items/example_item"
 
 ```
+
+
+
+```bash
+
+{“name”:”milk”,
+“Price”:”23”}
+
+```
+
+
+In insomnia or postman after running `node app.js` and starting the server enter the following command as a post
+```bash
+{
+  "name": "New Itefm2",
+  "price": 19.99
+}
+``
